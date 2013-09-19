@@ -53,6 +53,14 @@ world-coordinate objects \citep{2001ASPC..238..129B}, data compression
 
 \section{NDF components}
 
+NDF is designed such that it can make use of the hierarchical
+organization of primitives and structures supported by HDS. HDS can
+store arrays of numbers and strings, structures containing other
+structures and also arrays of structures. This means, for example,
+that an HDS file can itself contain multiple of structures of type
+NDF. This facility is very useful for acquisition systems that have
+multiple readouts.
+
 In this section we provide a general overview of the data model
 implemented by NDF.
 
