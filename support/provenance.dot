@@ -1,0 +1,77 @@
+digraph provenance {
+   edge [dir=back]
+   A0 [label="gs20100310_9_850_reduced"
+            +"\\nKAPPA:NDFCOPY"
+   ]
+   A0 -> A1
+ 
+   A1 [label="gs20100310_9_850_mos"
+            +"\\nCCDPACK:MAKEMOS"
+   ]
+   A1 -> A2
+   A1 -> A7
+ 
+   A2 [label="s20100310_00038_850_reduced"
+            +"\\nKAPPA:NDFCOPY"
+   ]
+   A2 -> A3
+ 
+   A3 [label="s20100310_00038_850_cal"
+            +"\\nKAPPA:CMULT"
+   ]
+   A3 -> A4
+ 
+   A4 [label="s20100310_00038_850_fmos"
+            +"\\nSMURF:MAKEMAP(ITER)"
+   ]
+   A4 -> A5
+   A4 -> A6
+ 
+   A5 [label="s8d20100310_00038_0003"
+            +"\\n<unknown>"
+   ]
+ 
+   A6 [label="s8d20100310_00038_0004"
+            +"\\n<unknown>"
+   ]
+ 
+   A7 [label="s20100310_00009_850_reduced"
+            +"\\nKAPPA:NDFCOPY"
+   ]
+   A7 -> A8
+ 
+   A8 [label="s20100310_00009_850_cal"
+            +"\\nKAPPA:CMULT"
+   ]
+   A8 -> A9
+ 
+   A9 [label="s20100310_00009_850_fmos"
+            +"\\nSMURF:MAKEMAP(ITER)"
+   ]
+   A9 -> A10
+   A9 -> A11
+   A9 -> A12
+   A9 -> A13
+   A9 -> A14
+ 
+   A10 [label="s8d20100310_00009_0003"
+            +"\\n<unknown>"
+   ]
+ 
+   A11 [label="s8d20100310_00009_0004"
+            +"\\n<unknown>"
+   ]
+ 
+   A12 [label="s8d20100310_00009_0005"
+            +"\\n<unknown>"
+   ]
+ 
+   A13 [label="s8d20100310_00009_0006"
+            +"\\n<unknown>"
+   ]
+ 
+   A14 [label="s8d20100310_00009_0007"
+            +"\\n<unknown>"
+   ]
+ 
+}
