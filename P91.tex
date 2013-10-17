@@ -36,7 +36,7 @@ Tucson, AZ 85719, USA}
 \section{Introduction}
 
 The extensible $N$-Dimensional Data Format
-\citep[NDF;][]{1993ASPC...52..229W,SGP38} was a data model layered on
+\citep[NDF;][]{1993ASPC...52..229W,SGP38} is a data model layered on
 top of the Starlink (ascl:1110.012) Hierarchical Data System
 \citep[HDS;][]{1982QJRAS..23..485D}. During the 1980s it became clear
 that a general hierarchical file format without regard for conventions
@@ -61,7 +61,9 @@ store arrays of numbers and strings, structures containing other
 structures and also arrays of structures. This means, for example,
 that an HDS file can itself contain multiple structures of type
 NDF. This facility is very useful for acquisition systems that have
-multiple readouts.
+multiple readouts as these can be stored together in an HDS container
+with common metadata associated with the container and readout-varying
+metadata in the NDF.
 
 \section{Components of the NDF Data Model}
 
@@ -82,7 +84,9 @@ of quality, and the bits can be associated with easy-to-remember
 string labels, and the individual bits can be activated based on a bit
 mask applicable to the whole array. Additionally, it is possible to
 use magic ``bad'' values where data is known to be irrevocably bad
-regardless of quality settings.
+regardless of quality settings. This allows masks with different
+semantics to be used concurrently, such as ``this is a bad pixel,
+ignore'' and ``this pixel is part of an extended source.''
 
 \subsection{World Coordinates}
 
